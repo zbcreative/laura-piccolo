@@ -506,8 +506,10 @@
       transform-origin: center;
     }
 
-    /* Open state — turn into X, force black */
-    .hamburger.is-open span {
+    /* Open state — turn into X, force black regardless of navbar scroll state */
+    .hamburger.is-open span,
+    .navbar:not(.scrolled) .hamburger.is-open span,
+    .navbar.scrolled .hamburger.is-open span {
       background: #000;
     }
     .hamburger.is-open span:nth-child(1) {
