@@ -508,23 +508,38 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 74px; left: 0; right: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       background: var(--warm-white);
-      border-top: 1px solid var(--border);
-      padding: 24px;
+      padding: 94px 32px 40px;
       z-index: 999;
       flex-direction: column;
-      gap: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      overflow-y: auto;
     }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      font-size: 1.05rem;
-      color: var(--text-dark);
-      padding: 8px 0;
+    .mobile-menu > a {
+      font-family: var(--ff-display);
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: var(--navy);
+      padding: 18px 0;
       border-bottom: 1px solid var(--border);
+      letter-spacing: 0.01em;
     }
-    .mobile-menu-ctas { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .mobile-menu > a:first-of-type { border-top: 1px solid var(--border); }
+    .mobile-menu > a:hover { color: var(--gold); }
+    .mobile-menu-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: auto;
+      padding-top: 40px;
+    }
+    .mobile-menu-ctas .btn {
+      width: 100%;
+      justify-content: center;
+      padding: 16px 24px;
+      font-size: 0.95rem;
+    }
 
     /* ===== HERO ===== */
     .hero {
