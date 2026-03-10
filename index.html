@@ -502,7 +502,23 @@
       width: 24px;
       height: 1.5px;
       background: var(--navy);
-      transition: var(--transition);
+      transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease;
+      transform-origin: center;
+    }
+
+    /* Open state — turn into X, force black */
+    .hamburger.is-open span {
+      background: #000;
+    }
+    .hamburger.is-open span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+    .hamburger.is-open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .hamburger.is-open span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
     }
 
     .mobile-menu {
@@ -2157,11 +2173,13 @@
   var mobileMenu = document.getElementById('mobileMenu');
   hamburger.addEventListener('click', function() {
     var open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('is-open', open);
     hamburger.setAttribute('aria-expanded', open);
   });
   mobileMenu.querySelectorAll('a').forEach(function(a) {
     a.addEventListener('click', function() {
       mobileMenu.classList.remove('open');
+      hamburger.classList.remove('is-open');
       hamburger.setAttribute('aria-expanded', 'false');
     });
   });
