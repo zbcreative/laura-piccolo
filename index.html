@@ -392,6 +392,21 @@
 
     .nav-logo {
       display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo-img {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-text {
+      display: flex;
       flex-direction: column;
       gap: 1px;
     }
@@ -976,6 +991,15 @@
       gap: 12px;
     }
 
+    .about-headshot-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 2px;
+      display: block;
+    }
+
     .about-img-placeholder svg { width: 60px; height: 60px; stroke: rgba(255,255,255,0.15); fill: none; }
     .about-img-placeholder p { font-size: 0.8rem; color: rgba(255,255,255,0.2); font-style: italic; }
 
@@ -1401,8 +1425,11 @@
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
   <div class="navbar-inner">
     <a href="/" class="nav-logo" aria-label="Laura Piccolo Notary Signing Agent - Home">
-      <span class="nav-logo-name">Laura Piccolo</span>
-      <span class="nav-logo-title">Notary Signing Agent</span>
+      <img src="laura_piccolo_logo.webp" alt="Laura Piccolo Notary" class="nav-logo-img">
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Laura Piccolo</span>
+        <span class="nav-logo-title">Notary Signing Agent</span>
+      </div>
     </a>
 
     <ul class="nav-links" role="list">
@@ -1706,10 +1733,7 @@
   <div class="container">
     <div class="about-inner">
       <div class="about-img-wrap fade-in">
-        <div class="about-img-placeholder">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
-          <p>Professional photo coming soon</p>
-        </div>
+        <img src="laura_piccolo_headshot.webp" alt="Laura Piccolo - Notary Signing Agent" class="about-headshot-img">
         <div class="about-credential-strip">
           <div class="cred-badge">
             <svg viewBox="0 0 24 24"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2zm-2 16l-4-4 1.41-1.41L10 15.17l6.59-6.59L18 10l-8 8z"/></svg>
