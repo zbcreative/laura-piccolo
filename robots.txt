@@ -1,0 +1,11 @@
+# Laura Piccolo Notary Signing Agent — trustedseals.net
+# https://trustedseals.net/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://trustedseals.net/sitemap.xml
+
+# AI / LLM discoverability (llms.txt provides structured site summary for AI systems)
+# See: https://trustedseals.net/llms.txt
