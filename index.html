@@ -677,7 +677,24 @@
       line-height: 1.7;
     }
 
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; }
+
+    .hero-cert-logos {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .hero-cert-logos img {
+      max-height: 48px;
+      width: auto;
+      max-width: 150px;
+      object-fit: contain;
+      opacity: 0.92;
+      filter: brightness(1.08);
+    }
 
     .hero-stats {
       display: flex;
@@ -1567,6 +1584,11 @@
             Call or Text Now
           </a>
           <a href="#services" class="btn btn-outline-gold">View Services</a>
+        </div>
+
+        <div class="hero-cert-logos" aria-label="Loan signing certifications">
+          <img src="lss_logo.webp" width="150" height="48" alt="Loan Signing System certified">
+          <img src="nna_logo.webp" width="150" height="48" alt="National Notary Association member">
         </div>
 
         <div class="hero-stats">
